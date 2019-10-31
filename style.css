@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: #333;
+  font: 20px/1 "Staatliches", sans-serif;
+}
+
+.main-content {
+  align-items: center;
+  display: flex;
+  height: 20vh;
+  justify-content: center;
+}
+
+.main-content__description {
+  font-size: 1.5rem;
+}
+
+.main-header {
+  align-items: center;
+  background-color: #333;
+  color: #eee;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 80vh;
+  justify-content: center;
+}
+
+.main-header__logo {
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-name: spin;
+  animation-timing-function: linear;
+  border: 2px solid #eee;
+  border-radius: 50%;
+  font-size: 13rem;
+  line-height: 0;
+  margin-bottom: 2rem;
+  padding: 10rem 7rem;
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
