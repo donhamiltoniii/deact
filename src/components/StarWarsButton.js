@@ -5,6 +5,13 @@ function StarWarsButton() {
     {
       class: "star-wars-button",
       onclick: () => {
+        fetch("http://localhost:3000/students")
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(data) {
+            console.log(data);
+          });
         console.log("button clicked!");
       }
     },
