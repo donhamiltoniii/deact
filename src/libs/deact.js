@@ -8,8 +8,11 @@ module.exports = {
     for (key in attributes) {
       //   attribute name: console.log(key);
       //   attribute value: console.log(attributes[key]);
-      //   createdElement.setAttribute(key, attributes[key]);
-      createdElement[key] = attributes[key];
+      if (key.startsWith("on")) {
+        createdElement[key] = attributes[key];
+      } else {
+        createdElement.setAttribute(key, attributes[key]);
+      }
     }
 
     if (typeof content === "string") {
