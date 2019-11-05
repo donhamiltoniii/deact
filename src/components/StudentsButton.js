@@ -4,21 +4,22 @@ const Button = require("./Button");
 const Http = require("../utils/http");
 
 function StudentsButton() {
+  function renderStudents() {
+    Http.getRequest("http://localhost:3000/students", function({ students }) {
+      students.forEach(student => {
+        Deact.render(
+          AppTitle("", student.name),
+          document.querySelector(".container")
+        );
+      });
+    });
+  }
+
   return Button(
     {
       class: "students-button",
-      onclick: () => {
-        Http.getRequest("http://localhost:3000/students", function({
-          students
-        }) {
-          students.forEach(student => {
-            Deact.render(
-              AppTitle(student.name, "yellow"),
-              document.querySelector(".app")
-            );
-          });
-        });
-      }
+      onclick: renderStudents,
+      style: `border-color: #eee; color: #eee;`
     },
     "Get Students!"
   );

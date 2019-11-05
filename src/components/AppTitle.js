@@ -1,10 +1,10 @@
 const Deact = require("../libs/deact");
 
-const AppTitle = function(text, textColor) {
+const AppTitle = function(className, text) {
   return Deact.create(
     "h1",
     {
-      style: `background-color: blue; color: ${textColor};`
+      class: `${className}`
     },
     text
   );

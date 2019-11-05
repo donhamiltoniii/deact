@@ -1,4 +1,4 @@
 const Deact = require("./libs/deact");
-const MainHeader = require("./components/MainHeader");
+const App = require("./components/App");
 
-Deact.render(MainHeader(), document.querySelector(".app"));
+Deact.render(App(), document.querySelector(".app"));
