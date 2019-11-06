@@ -1,4 +1,5 @@
 const Deact = require("../libs/deact");
+const Nav = require("./Nav");
 
 function MainHeader() {
   return Deact.create(
