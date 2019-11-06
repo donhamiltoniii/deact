@@ -11,6 +11,11 @@ html {
   font: 20px/1 "Staatliches", sans-serif;
 }
 
+#app {
+  background-color: #000;
+  height: 100vh;
+}
+
 .main-content {
   align-items: center;
   display: flex;

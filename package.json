@@ -1,0 +1,26 @@
+{
+  "name": "front-end-trial",
+  "version": "1.0.0",
+  "description": "A light-weight DOM based UI library.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --content-base docs/ --open --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donhamiltoniii/deact.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donhamiltoniii/deact/issues"
+  },
+  "homepage": "https://github.com/donhamiltoniii/deact#readme"
+}
