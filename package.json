@@ -1,15 +1,18 @@
 {
   "name": "front-end-trial",
   "version": "1.0.0",
-  "description": "A light-weight DOM based UI library.",
+  "description": "A haven for heavy metal heads.",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack": "^4.41.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --content-base docs/ --open --hot"
   },
   "repository": {
