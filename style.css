@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Staatliches&display=swap");
 
 * {
   box-sizing: border-box;
@@ -30,22 +30,4 @@ html {
   flex-direction: column-reverse;
   height: 80vh;
   justify-content: center;
-}
-
-.main-header__logo {
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-name: spin;
-  animation-timing-function: linear;
-  border: 2px solid #eee;
-  border-radius: 50%;
-  font-size: 13rem;
-  line-height: 0;
-  margin-bottom: 2rem;
-  padding: 10rem 7rem;
-}
-
-@keyframes spin {
-  from {transform:rotate(0deg);}
-  to {transform:rotate(360deg);}
 }
