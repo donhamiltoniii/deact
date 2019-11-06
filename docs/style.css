@@ -13,6 +13,13 @@ img {
   width: 100%;
 }
 
+.cohorts-button,
+.students-button {
+  background-color: transparent;
+  border: 3px solid black;
+  padding: 0.5rem 1rem;
+}
+
 .container {
   margin: 0 auto;
   max-width: 30rem;
@@ -21,12 +28,6 @@ img {
 
 .yellow-text-color {
   color: yellow;
-}
-
-.students-button {
-  background-color: transparent;
-  border: 3px solid black;
-  padding: 0.5rem 1rem;
 }
 
 .student-card {

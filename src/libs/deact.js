@@ -1,5 +1,6 @@
 module.exports = {
   render(child, parent) {
+    parent.innerHTML = "";
     parent.append(child);
   },
   create(element, attributes = {}, content) {

@@ -1,5 +1,6 @@
 const Deact = require("../libs/deact");
 const AppTitle = require("./AppTitle");
+const CohortsButton = require("./CohortsButton");
 const Container = require("./Container");
 const StudentsButton = require("./StudentsButton");
 const Nav = require("./Nav");
@@ -12,7 +13,7 @@ function MainHeader() {
     },
     [
       AppTitle("yellow-text-color", "WCCI Student App"),
-      Nav({}, StudentsButton())
+      Nav({}, [CohortsButton(), StudentsButton()])
     ]
   );
 }

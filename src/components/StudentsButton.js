@@ -21,7 +21,7 @@ function StudentsButton() {
       onclick: renderStudents,
       style: `border-color: #eee; color: #eee;`
     },
-    "Get Students!"
+    "Students"
   );
 }
 
