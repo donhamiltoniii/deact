@@ -1,12 +1,6 @@
 module.exports = {
-  getRequest(location, callback) {
-    fetch(location)
-      .then(function(response) {
-        return response.json();
-      })
-      .then(callback)
-      .catch(function(error) {
-        console.error(error);
-      });
+  async getRequest(location) {
+    const fetchResponse = await fetch(location);
+    return await fetchResponse.json();
   }
 };

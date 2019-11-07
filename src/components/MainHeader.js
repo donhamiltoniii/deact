@@ -5,7 +5,7 @@ const Container = require("./Container");
 const StudentsButton = require("./StudentsButton");
 const Nav = require("./Nav");
 
-function MainHeader() {
+async function MainHeader() {
   return Deact.create(
     "header",
     {
@@ -13,7 +13,7 @@ function MainHeader() {
     },
     [
       AppTitle("yellow-text-color", "WCCI Student App"),
-      Nav({}, [CohortsButton(), StudentsButton()])
+      Nav({}, [CohortsButton(), await StudentsButton()])
     ]
   );
 }

@@ -2,9 +2,9 @@ const Deact = require("../libs/deact");
 const MainContent = require("./MainContent");
 const MainHeader = require("./MainHeader");
 
-function App() {
+async function App() {
   return Deact.create("section", { class: `app-container` }, [
-    MainHeader(),
+    await MainHeader(),
     MainContent()
   ]);
 }
