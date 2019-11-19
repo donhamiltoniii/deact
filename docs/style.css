@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: #333;
+  font: 20px/1 sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.cohorts-button,
+.students-button {
+  background-color: transparent;
+  border: 3px solid black;
+  padding: 0.5rem 1rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 30rem;
+  width: 90%;
+}
+
+.yellow-text-color {
+  color: yellow;
+}
+
+.student-card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.student-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
