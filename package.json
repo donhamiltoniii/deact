@@ -4,6 +4,7 @@
   "description": "A light-weight DOM based UI library.",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --mode production --content-base docs/ --output-path docs/",
     "start": "webpack-dev-server --mode development --content-base docs/ --open --hot"
   },
   "repository": {
