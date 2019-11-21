@@ -1,19 +1,19 @@
-const Deact = require("../libs/deact");
+const Deact = require("../lib/deact");
 const Button = require("./Button");
-const Http = require("../utils/http");
+const Http = require("../util/http");
 const StudentCard = require("./StudentCard");
 const StudentsPage = require("./StudentsPage");
 
-async function StudentsButton() {
-  async function renderStudents() {
+async function StudentsButton () {
+  async function renderStudents () {
     document.querySelector(".main-content .container").innerHTML = "";
     Deact.render(
       await StudentsPage(),
       document.querySelector(".main-content .container")
     );
-    Http.getRequest("http://localhost:3000/students", function(response) {
+    Http.getRequest("http://localhost:3000/students", function (response) {
       const { cohorts, students } = response;
-      students.forEach(function(student) {
+      students.forEach(function (student) {
         Deact.render(
           StudentCard(student),
           document.querySelector(".student-cards")

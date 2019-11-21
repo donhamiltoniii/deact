@@ -1,9 +1,9 @@
-const Deact = require("../libs/deact");
+const Deact = require("../lib/deact");
 const Button = require("./Button");
-const Http = require("../utils/http");
+const Http = require("../util/http");
 
-async function StudentForm() {
-  function handleSubmit(event) {
+async function StudentForm () {
+  function handleSubmit (event) {
     event.preventDefault();
 
     const name = document.querySelector(".student-name").value;
@@ -31,7 +31,7 @@ async function StudentForm() {
       });
   }
 
-  async function CohortsDropDown() {
+  async function CohortsDropDown () {
     const cohortsResponse = await Http.getRequest(
       "http://localhost:3000/cohorts"
     );

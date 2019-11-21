@@ -1,9 +1,9 @@
-const Deact = require("../libs/deact");
+const Deact = require("../lib/deact");
 const Button = require("./Button");
-const Http = require("../utils/http");
+const Http = require("../util/http");
 
-function CohortForm() {
-  function handleSubmit(event) {
+function CohortForm () {
+  function handleSubmit (event) {
     event.preventDefault();
 
     const titleInput = document.querySelector(".cohort-title");

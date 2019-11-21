@@ -1,11 +1,11 @@
-const Deact = require("../libs/deact");
+const Deact = require("../lib/deact");
 const AppTitle = require("./AppTitle");
 const CohortsButton = require("./CohortsButton");
 const Container = require("./Container");
 const StudentsButton = require("./StudentsButton");
 const Nav = require("./Nav");
 
-async function MainHeader() {
+async function MainHeader () {
   return Deact.create(
     "header",
     {

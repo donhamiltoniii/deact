@@ -1,8 +1,8 @@
-const Deact = require("../libs/deact");
+const Deact = require("../lib/deact");
 const StudentCards = require("./StudentCards");
 const StudentForm = require("./StudentForm");
 
-async function StudentsPage() {
+async function StudentsPage () {
   return Deact.create("article", { class: "students-page" }, [
     await StudentForm(),
     StudentCards()

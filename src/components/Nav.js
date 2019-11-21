@@ -1,6 +1,6 @@
-const Deact = require("../libs/deact");
+const Deact = require("../lib/deact");
 
-const Nav = function(attributes, content) {
+const Nav = function (attributes, content) {
   return Deact.create("nav", attributes, content);
 };
 

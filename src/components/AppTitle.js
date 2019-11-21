@@ -1,6 +1,6 @@
-const Deact = require("../libs/deact");
+const Deact = require("../lib/deact");
 
-const AppTitle = function(className, text) {
+const AppTitle = function (className, text) {
   return Deact.create(
     "h1",
     {

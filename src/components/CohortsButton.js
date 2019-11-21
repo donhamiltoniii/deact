@@ -1,9 +1,9 @@
-const Deact = require("../libs/deact");
+const Deact = require("../lib/deact");
 const Button = require("./Button");
 const CohortForm = require("./CohortForm");
-const Http = require("../utils/http");
+const Http = require("../util/http");
 
-function CohortsButton() {
+function CohortsButton () {
   //   function renderCohorts() {
   // Http.getRequest("http://localhost:3000/students", function({ students }) {
   //   students.forEach(student => {
@@ -14,7 +14,7 @@ function CohortsButton() {
   //   });
   // });
   //   }
-  function renderCohortForm() {
+  function renderCohortForm () {
     Deact.render(CohortForm(), document.querySelector(".main-content"));
   }
 

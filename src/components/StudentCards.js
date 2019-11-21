@@ -1,6 +1,6 @@
-const Deact = require("../libs/deact");
+const Deact = require("../lib/deact");
 
-function StudentCards() {
+function StudentCards () {
   return Deact.create("section", { class: `student-cards` }, "");
 }
 

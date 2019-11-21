@@ -1,8 +1,8 @@
-const Deact = require("../libs/deact");
+const Deact = require("../lib/deact");
 const Container = require("./Container");
 const StudentCards = require("./StudentCards");
 
-function MainContent() {
+function MainContent () {
   return Deact.create("main", { class: `main-content` }, Container(""));
 }
 
