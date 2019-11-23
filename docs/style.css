@@ -13,6 +13,12 @@ html {
   font: 20px/1 Montserrat, sans-serif;
 }
 
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 img {
   width: 100%;
 }

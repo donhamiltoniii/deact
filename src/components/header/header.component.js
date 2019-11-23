@@ -18,7 +18,11 @@ function Header () {
     Deact.createElement(
       'a',
       {
-        href: 'https://donhamiltoniii.github.io/deact'
+        href: 'https://donhamiltoniii.github.io/deact',
+        style: `
+          color: #fdb;
+          cursor: pointer;
+        `
       },
       'Deact Homepage'
     )
