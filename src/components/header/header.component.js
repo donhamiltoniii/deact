@@ -1,5 +1,7 @@
 const Deact = require('../../lib/deact')
 
+const FlexContainer = require('../flex-container/flex-container.component')
+const Link = require('../link/link.component')
 const Title = require('../title/title.component')
 
 function Header () {
@@ -15,17 +17,12 @@ function Header () {
       `
     },
     Title(),
-    Deact.createElement(
-      'a',
-      {
-        href: 'https://donhamiltoniii.github.io/deact',
-        style: `
-          color: #fdb;
-          cursor: pointer;
-        `
-      },
-      'Deact Homepage'
-    )
+    FlexContainer({
+      children: [
+        Link({ href: 'https://donhamiltoniii.github.io/deact', text: 'Deact Homepage' }),
+        Link({ href: 'https://github.com/donhamiltoniii/deact', text: 'Deact Docs' })
+      ]
+    })
   )
 }
 
