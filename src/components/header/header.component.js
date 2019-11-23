@@ -10,6 +10,7 @@ function Header () {
         align-items: center;
         background-color: #357;
         display: flex;
+        justify-content: space-between;
         padding: 1rem;
       `
     },
