@@ -10,13 +10,13 @@ function ClickEventExample () {
     Button(
       {
         onclick: event => {
-          const textBlock = event.target.parentElement.querySelector('.click-example-text')
+          const textBlock = event.target.parentElement.querySelector('.reveal-text')
           textBlock.style.display = 'block'
         },
         text: 'Reveal hidden text'
       }
     ),
-    TextBlock({ className: 'click-example-text', hidden: true, text: 'You have done the good clicking! Solid job fam.' })
+    TextBlock({ className: 'reveal-text', hidden: true, text: 'You have done the good clicking! Solid job fam.' })
   )
 }
 

@@ -1,10 +1,10 @@
 const Deact = require('../../lib/deact')
 
-function TextBlock ({ fontSize = '1rem', hidden = false, text = "no text provided" } = {}) {
+function TextBlock ({ className = '', fontSize = '1rem', hidden = false, text = "no text provided" } = {}) {
   return Deact.createElement(
     "p",
     {
-      className: 'text-block',
+      className,
       style: `
         display: ${hidden ? 'none' : 'block'};
         font-size: ${fontSize};
