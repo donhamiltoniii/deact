@@ -1,32 +1,44 @@
-module.exports = {
-  async render(child, parent) {
-    parent.append(await child);
-  },
-  create(element, attributes = {}, content) {
-    const createdElement = document.createElement(element);
+function render (element, container) {
+  const domElement = element.type === 'TEXT_ELEMENT' ? document.createTextNode("") : document.createElement(element.type)
 
-    for (key in attributes) {
-      //   attribute name: console.log(key);
-      //   attribute value: console.log(attributes[key]);
-      if (key.startsWith("on")) {
-        createdElement[key] = attributes[key];
-      } else {
-        createdElement.setAttribute(key, attributes[key]);
-      }
+  const isProperty = key => key !== "children"
+
+  Object.keys(element.props).filter(isProperty).forEach(name => {
+    domElement[name] = element.props[name]
+  })
+
+  element.props.children.forEach(child => {
+    render(child, domElement)
+  })
+
+  container.appendChild(domElement)
+}
+
+function createElement (type, props = {}, ...children) {
+  return {
+    type,
+    props: {
+      ...props,
+      children: children.map(child =>
+        typeof child === "object"
+          ? child
+          : createTextElement(child)
+      )
     }
-
-    if (typeof content === "string") {
-      createdElement.innerHTML = content;
-    } else if (content instanceof HTMLElement) {
-      createdElement.append(content);
-    } else if (content instanceof Array) {
-      content.forEach(function(htmlElement) {
-        createdElement.append(htmlElement);
-      });
-    } else {
-      throw new Error("Not a valid content-type for element");
-    }
-
-    return createdElement;
   }
-};
+}
+
+function createTextElement (text) {
+  return {
+    type: 'TEXT_ELEMENT',
+    props: {
+      nodeValue: text,
+      children: []
+    }
+  }
+}
+
+module.exports = {
+  createElement,
+  render
+}
