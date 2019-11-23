@@ -13,7 +13,14 @@ function Header () {
         padding: 1rem;
       `
     },
-    Title()
+    Title(),
+    Deact.createElement(
+      'a',
+      {
+        href: 'https://donhamiltoniii.github.io/deact'
+      },
+      'Deact Homepage'
+    )
   )
 }
 
