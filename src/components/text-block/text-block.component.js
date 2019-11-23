@@ -8,6 +8,7 @@ function TextBlock ({ className = '', fontSize = '1rem', hidden = false, text = 
       style: `
         display: ${hidden ? 'none' : 'block'};
         font-size: ${fontSize};
+        line-height: 1.4;
         margin-bottom: 1rem;
       `
     },
